@@ -3,7 +3,7 @@
 a {
 	position: relative;
 	display: inline-block;
-	font-size: 2rem;
+	font-size: 1.5rem;
 	overflow: hidden;
 	background: linear-gradient(90deg, $highlight-color-lt 50%, $fg-color 50%);
 	background-clip: text;
@@ -15,7 +15,7 @@ a {
 	text-decoration: none;
 
 	&::after {
-		font-size: 1.5rem;
+		font-size: 1.25rem;
 		font-weight: 100;
 		font-family: 'Material Icons Sharp';
 		display: inline-block;
@@ -29,13 +29,13 @@ a {
 		background-position: 0;
 
 		&::after {
-			height: 2rem;
-			width: 2rem;
+			height: 1.5rem;
+			width: 1.5rem;
 			transition: all 0.25s ease 0.15s;
 		}
 		
 		svg {
-			fill: $highlight-color-lt !important;
+			fill: $highlight-color-lt;
 		}
 	}
 }
