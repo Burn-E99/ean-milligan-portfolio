@@ -1,0 +1,14 @@
+@import '../vars.scss';
+
+.page-body {
+	display: flex;
+
+	hr {
+		border: none;
+		border-left: 1px solid $fg-color-dk;
+	}
+
+	.column {
+		width: 49%;
+	}
+}

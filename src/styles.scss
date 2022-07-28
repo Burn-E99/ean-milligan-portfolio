@@ -1,1 +1,131 @@
-/* You can add global styles to this file, and also import other style files */
+@import './vars.scss';
+
+body {
+	font-family: "Raleway", sans-serif;
+	font-weight: 200;
+	font-size: 0.9rem;
+
+	cursor: default;
+
+	margin: 0 5vw;
+	padding: 0;
+
+	background-color: $bg-color;
+	color: $fg-color;
+}
+
+h1 {
+	font-size: 4rem;
+	font-weight: 400;
+	margin: 5px 0;
+}
+
+h2 {
+	font-size: 1.75rem;
+	font-weight: 400;
+	margin: 5px 0;
+}
+
+h3 {
+	font-size: 1.25rem;
+	font-weight: 300;
+	margin: 0 0 5px 0;
+
+	a {
+		position: relative;
+		display: inline-block;
+		overflow: hidden;
+		background: linear-gradient(90deg, $highlight-color-lt 50%, $fg-color 50%);
+		background-clip: text;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-size: 200% 100%;
+		background-position: 100%;
+		transition: background-position 0.25s ease;
+		text-decoration: none;
+
+		&::after {
+			font-size: 1rem;
+			font-weight: 100;
+			font-family: 'Material Icons Sharp';
+			margin-left: 0.25rem;
+			display: inline-block;
+			height: 0;
+			width: 0;
+			transition: all 0.25s ease;
+			content: '\e89e';
+		}
+
+		&:hover {
+			background-position: 0;
+
+			&::after {
+				height: 1rem;
+				width: 1rem;
+				transition: all 0.25s ease 0.15s;
+			}
+		}
+	}
+}
+
+.dateRange {
+	float: right;
+}
+
+.bucket {
+	margin: 0 5px 5px 0;
+	padding: $bucket-size;
+
+	border-radius: 0 $bucket-size*4;
+
+	background-image: linear-gradient(150deg, $highlight-color-dk 10%, $highlight-color-lt 50%, $bg-color-dk 50%);
+	background-size: 400% 110%;
+	background-position: right top;
+
+	transition: background-position 0.6s ease-out;
+
+	&.hover {
+		background-position: left bottom;
+	}
+
+	.bucket-liner {
+		border-radius: 0 $bucket-size*4 - 2;
+		background-color: $bg-color;
+		padding: 0.3rem;
+	}
+}
+
+.caret {
+	cursor: pointer;
+
+	&:hover {
+		color: $highlight-color-lt;
+	}
+
+	&::before {
+		font-size: 1.5rem;
+		font-weight: 100;
+		font-family: 'Material Icons Sharp';
+		display: inline-block;
+
+		transition: transform 0.25s ease,
+			color 0.25s ease;
+		content: '\e5ce';
+	}
+	
+	&.all::before {
+		content: '\eacf';
+	}
+
+	&.expand {
+		&::before {
+			transform: scaleY(-1);
+		}
+	}
+
+	&.collapse {
+		&::before {
+			transform: scaleY(1);
+		}
+	}
+}

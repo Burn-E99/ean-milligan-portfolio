@@ -1,0 +1,13 @@
+<div>
+	<h3>
+		<a *ngIf="company.url" [href]="company.url" target="_blank">{{company.name}} - {{company.title}}</a>
+		<span *ngIf="!company.url">{{company.name}}</span>
+		<span class="dateRange">
+			{{company.startDate}} - {{company.endDate}}
+			<span class="caret" [ngClass]="projectsState === 'shown' ? 'collapse' : 'expand'" (click)="toggleExpanded()"></span>
+		</span>
+	</h3>
+	<div class="projects" [@slideInOut]="projectsState">
+		<app-project *ngFor="let project of company.projects" [project]="project"></app-project>
+	</div>
+</div>

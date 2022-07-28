@@ -1,0 +1,11 @@
+<div>
+	<h3>
+		<a *ngIf="education.url" [href]="education.url" target="_blank">{{education.name}}</a>
+		<span *ngIf="!education.url">{{education.name}}</span>
+		<span class="dateRange">{{education.startDate}} - {{education.endDate}}</span>
+	</h3>
+	<div class="degrees">
+		<div *ngIf="education.major">Major: {{education.major}}</div>
+		<div *ngIf="education.minor">Minor: {{education.minor}}</div>
+	</div>
+</div>
