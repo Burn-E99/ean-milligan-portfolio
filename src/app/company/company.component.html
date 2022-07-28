@@ -2,7 +2,7 @@
 	<h3>
 		<a *ngIf="company.url" [href]="company.url" target="_blank">{{company.name}} - {{company.title}}</a>
 		<span *ngIf="!company.url">{{company.name}}</span>
-		<span class="dateRange">
+		<span class="pull-right">
 			{{company.startDate}} - {{company.endDate}}
 			<span class="caret" [ngClass]="projectsState === 'shown' ? 'collapse' : 'expand'" (click)="toggleExpanded()"></span>
 		</span>

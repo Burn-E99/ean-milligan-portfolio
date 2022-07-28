@@ -1,0 +1,11 @@
+@import '../../vars.scss';
+
+svg {
+	margin-left: 0.5rem;
+	fill: $fg-color;
+	transition: fill 0.25s ease;
+
+	&:hover {
+		fill: $highlight-color-lt;
+	}
+}

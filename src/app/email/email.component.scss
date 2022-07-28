@@ -1,0 +1,48 @@
+@import '../../vars.scss';
+
+a {
+	position: relative;
+	display: inline-block;
+	font-size: 2rem;
+	overflow: hidden;
+	background: linear-gradient(90deg, $highlight-color-lt 50%, $fg-color 50%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-size: 200% 100%;
+	background-position: 100%;
+	transition: background-position 0.25s ease;
+	text-decoration: none;
+
+	&::after {
+		font-size: 1.5rem;
+		font-weight: 100;
+		font-family: 'Material Icons Sharp';
+		display: inline-block;
+		height: 0;
+		width: 0;
+		transition: all 0.25s ease;
+		content: '\e89e';
+	}
+
+	&:hover {
+		background-position: 0;
+
+		&::after {
+			height: 2rem;
+			width: 2rem;
+			transition: all 0.25s ease 0.15s;
+		}
+		
+		svg {
+			fill: $highlight-color-lt !important;
+		}
+	}
+}
+
+svg {
+	vertical-align: middle;
+	margin-left: 0.5rem;
+	fill: $fg-color;
+	transition: fill 0.25s ease;
+}

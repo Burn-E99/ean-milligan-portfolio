@@ -9,7 +9,7 @@ const DLProjects: Project[] = [
 		details: [
 			'Developed and maintained multiple high visibility, mission-critical logistics applications simultaneously',
 			'Designed new workflows from the ground up to assist the customer in managing and tracking their assets more efficiently',
-			'Improved applications by eliminating technical debt and locking down the service endpoints using role and user based rules',
+			'Improved legacy applications by eliminating technical debt and locking down the service endpoints using role and user based rules',
 			'Worked directly with the customer to showcase new features and determine the root cause of some difficult to reproduce bugs',
 			'Wrote in depth test cases for both the internal Definitive Logic testers and the customer',
 			'Assisted developers new to the project with onboarding, including setting up their applications and explaining the ecosystem'
@@ -26,7 +26,7 @@ const DLProjects: Project[] = [
 			'Executed the full migration over the weekend to give the development teams minimal downtime, allowing them to start in GitLab Monday morning without any major issues',
 			'Worked with the development teams to assist in setting developers up in the new environment'
 		],
-		skills: ['node', 'js', 'postman', 'gitlab', 'jira', 'bitbucket', 'windont', 'jenkins', 'sonar'],
+		skills: ['node', 'js', 'postman', 'gitlab', 'jira', 'bitbucket', 'windont', 'jenkins', 'sonar', 'vscode'],
 	},
 ]
 

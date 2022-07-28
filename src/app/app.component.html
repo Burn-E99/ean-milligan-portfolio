@@ -1,13 +1,19 @@
 <div>
   <div>
-    <h1>Ean Milligan</h1>
+    <h1>
+      Ean Milligan
+      <app-socials class="pull-right"></app-socials>
+    </h1>
+    <app-email></app-email>
+    <div>slug</div>
   </div>
+  <br/>
   <div class="page-body">
     <div class="column">
       <div>
         <h2>
           Work History
-          <span class="dateRange">
+          <span class="pull-right">
             <span class="caret all" [ngClass]="expandAll ? 'collapse' : 'expand'" (click)="toggleExpanded()"></span>
           </span>
         </h2>
