@@ -12,7 +12,6 @@
           </span>
         </h2>
         <div>
-          <!-- [expanded]="isFirst" -->
           <app-company *ngFor="let company of workHistory" [company]="company" [projectsState]="expandAll  ? 'shown' : 'hidden'"></app-company>
         </div>
       </div>

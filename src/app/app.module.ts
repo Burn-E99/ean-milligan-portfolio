@@ -27,5 +27,5 @@ export class AppModule { }
 
 console.log('%cHello!', 'color:orange;font-family:system-ui;font-size:4rem;-webkit-text-stroke: 4px black;font-weight:bold');
 console.log('%cThanks for checking out my portfolio!', 'color:orange;font-family:system-ui;font-size:2rem;-webkit-text-stroke: 2px black;font-weight:bold');
-console.log('%cIf you\'re in here looking to see how this page is built, I\'ll save you a bit of time, this app is on my GitHub! %chttps://github.com/Burn-E99/', 'color:orange;font-family:system-ui;font-size:2rem;-webkit-text-stroke: 2px black;font-weight:bold', 'color:lightblue;font-family:system-ui;font-size:2rem;-webkit-text-stroke: 1px black;font-weight:bold');
+console.log('%cIf you\'re in here looking to see how this page is built, I\'ll save you a bit of time, this app is on my GitHub! %chttps://github.com/Burn-E99/ean-milligan-portfolio/', 'color:orange;font-family:system-ui;font-size:2rem;-webkit-text-stroke: 2px black;font-weight:bold', 'color:lightblue;font-family:system-ui;font-size:2rem;-webkit-text-stroke: 1px black;font-weight:bold');
 console.log('%c~Ean Milligan', 'color:orange;font-family:system-ui;font-size:2rem;-webkit-text-stroke: 2px black;font-weight:bold');
