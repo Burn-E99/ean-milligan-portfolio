@@ -1,6 +1,6 @@
 <div>
 	<h3>
-		<a *ngIf="education.url" [href]="education.url" target="_blank">{{education.name}}</a>
+		<a *ngIf="education.url" [href]="education.url" target="_blank" rel="noopener">{{education.name}}</a>
 		<span *ngIf="!education.url">{{education.name}}</span>
 		<span class="pull-right">{{education.startDate}} - {{education.endDate}}</span>
 	</h3>

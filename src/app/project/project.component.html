@@ -1,7 +1,7 @@
 <div class="bucket" [class.hover]="shouldHover" (mouseenter)="onHover(true)" (mouseleave)="onHover(false)">
 	<div class="bucket-liner">
 		<h3>
-			<a *ngIf="project.url" [href]="project.url" target="_blank">{{project.name}}</a>
+			<a *ngIf="project.url" [href]="project.url" target="_blank" rel="noopener">{{project.name}}</a>
 			<span *ngIf="!project.url">{{project.name}}</span>
 			<span *ngIf="project.startDate" class="pull-right">{{project.startDate}}<span *ngIf="project.endDate"> - {{project.endDate}}</span></span>
 		</h3>
