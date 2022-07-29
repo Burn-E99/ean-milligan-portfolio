@@ -281,7 +281,7 @@ export const SKILLS: Skill[] = [
 		id: 'c',
 		type: 'lang',
 		name: 'C/C++',
-		expLevel: 3,
+		expLevel: 2,
 		yearsExp: 2,
 		projects: [],
 	}, {

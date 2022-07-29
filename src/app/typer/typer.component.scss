@@ -1,0 +1,20 @@
+@import '../../vars.scss';
+
+.typing {
+	color: $highlight-color-lt;
+
+	&::after {
+		content: '|';
+		margin-left: 0.1rem;
+		animation: 1s blink step-end infinite;
+	}
+}
+
+@keyframes blink {
+  from, to {
+    opacity: 0%;
+  }
+  50% {
+    opacity: 100%;
+  }
+}

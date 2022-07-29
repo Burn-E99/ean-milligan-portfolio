@@ -12,6 +12,7 @@ export class AppComponent implements OnInit {
   osProjects: Project[] = [];
   education: Education[] = [];
   allSkills: Skill[] = [];
+  experiencedSkills: string[] = [];
   expandAll: boolean = false;
 
   toggleExpanded(): void {
@@ -25,6 +26,8 @@ export class AppComponent implements OnInit {
     this.osProjects = this.experienceService.getOpenSourceProjects();
     this.education = this.experienceService.getEducation();
     this.allSkills = this.experienceService.getSkills();
+
+    this.experiencedSkills = this.allSkills.filter(skill => skill.expLevel >= 3).map(skill => skill.name);
   }
 
   getFilteredSkills(type: string): Skill[] {

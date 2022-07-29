@@ -9,6 +9,7 @@ import { CompanyComponent } from './company/company.component';
 import { EducationComponent } from './education/education.component';
 import { SocialsComponent } from './socials/socials.component';
 import { EmailComponent } from './email/email.component';
+import { TyperComponent } from './typer/typer.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { EmailComponent } from './email/email.component';
     CompanyComponent,
     EducationComponent,
     SocialsComponent,
-    EmailComponent
+    EmailComponent,
+    TyperComponent
   ],
   imports: [
     BrowserModule,
