@@ -12,14 +12,14 @@ export class AppComponent implements OnInit {
   osProjects: Project[] = [];
   education: Education[] = [];
   allSkills: Skill[] = [];
-  experiencedSkills: string[] = [];
+  experiencedSkills: Skill[] = [];
   expandAll: boolean = false;
 
   toggleExpanded(): void {
     this.expandAll = !this.expandAll;
   }
 
-  constructor(private experienceService: ExperienceService) {}
+  constructor(private experienceService: ExperienceService) { }
 
   ngOnInit(): void {
     this.workHistory = this.experienceService.getCompanies();
@@ -27,7 +27,7 @@ export class AppComponent implements OnInit {
     this.education = this.experienceService.getEducation();
     this.allSkills = this.experienceService.getSkills();
 
-    this.experiencedSkills = this.allSkills.filter(skill => skill.expLevel >= 3).map(skill => skill.name);
+    this.experiencedSkills = this.allSkills.filter(skill => skill.expLevel >= 3);
   }
 
   getFilteredSkills(type: string): Skill[] {

@@ -1,4 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { ExperienceService } from '../experience.service';
+import { Skill } from '../structs';
 
 @Component({
   selector: 'app-typer',
@@ -6,11 +8,13 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./typer.component.scss']
 })
 export class TyperComponent implements OnInit {
-  @Input() wordList: string[] = [];
+  @Input() skillList: Skill[] = [];
   currentWord: string[] = [];
-  currentIdx: number = 0;
+  currentIdx: number = -1;
+  
+  constructor(private experienceService: ExperienceService) {}
 
-  shuffleList(array: string[]) {
+  shuffleList(array: any[]) {
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
       [array[i], array[j]] = [array[j], array[i]];
@@ -18,15 +22,18 @@ export class TyperComponent implements OnInit {
   }
 
   startTyping(): void {
-    const wordToType = this.wordList[this.currentIdx];
+    this.currentIdx++;
+    if (this.currentIdx >= this.skillList.length) {
+      this.currentIdx = 0;
+    }
+
+    if (this.currentIdx === 0) {
+      this.shuffleList(this.skillList);
+    }
+    
+    const wordToType = this.skillList[this.currentIdx].name;
 
     this.typeWord(wordToType.split(''));
-
-    this.currentIdx++;
-    if (this.currentIdx >= this.wordList.length) {
-      this.currentIdx = 0;
-      this.shuffleList(this.wordList);
-    }
   }
 
   deleteWord(): void {
@@ -56,8 +63,11 @@ export class TyperComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.shuffleList(this.wordList);
     this.startTyping();
+  }
+
+  onHover(enter: boolean): void {
+    this.experienceService.setHoveredSkillId(enter ? this.skillList[this.currentIdx].id : '');
   }
 
 }
