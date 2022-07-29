@@ -11,8 +11,8 @@ export class TyperComponent implements OnInit {
   @Input() skillList: Skill[] = [];
   currentWord: string[] = [];
   currentIdx: number = -1;
-  
-  constructor(private experienceService: ExperienceService) {}
+
+  constructor(private experienceService: ExperienceService) { }
 
   shuffleList(array: any[]) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -30,7 +30,7 @@ export class TyperComponent implements OnInit {
     if (this.currentIdx === 0) {
       this.shuffleList(this.skillList);
     }
-    
+
     const wordToType = this.skillList[this.currentIdx].name;
 
     this.typeWord(wordToType.split(''));
@@ -63,7 +63,9 @@ export class TyperComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.startTyping();
+    setTimeout(() => {
+      this.startTyping();
+    }, 2500);
   }
 
   onHover(enter: boolean): void {

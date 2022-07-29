@@ -1,7 +1,13 @@
 @import '../../vars.scss';
 
-svg {
+a {
 	margin-left: 0.5rem;
+	display: inline-block;
+	height: 0rem;
+	width: 2rem;
+}
+
+svg {
 	fill: $fg-color;
 	transition: fill 0.25s ease;
 
