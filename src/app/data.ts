@@ -17,7 +17,7 @@ const DLProjects: Project[] = [
 		skills: ['js', 'ts', 'java', 'sql', 'scss', 'css', 'html', 'react', 'angular', 'angularjs', 'git', 'vscode', 'gitlab', 'jenkins', 'sonar', 'jira', 'bitbucket', 'sourcetree', 'mvn', 'tomcat', 'eclipse', 'windont'],
 	}, {
 		id: 'dl-migration',
-		name: 'Atlassian to GitLab Migration Team Member',
+		name: 'Atlassian to GitLab Migration Team',
 		startDate: 'Apr 2022',
 		endDate: 'May 2022',
 		details: [
@@ -49,7 +49,7 @@ const InnovatorsProjects: Project[] = [
 	{
 		id: 'ir-fires',
 		url: 'https://innovators3138.org/fires/',
-		name: 'FIRES Developer',
+		name: 'FIRES Development Team',
 		startDate: 'Aug 2015',
 		endDate: 'Jun 2018',
 		details: [
