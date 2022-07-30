@@ -10,6 +10,7 @@ import { EducationComponent } from './education/education.component';
 import { SocialsComponent } from './socials/socials.component';
 import { EmailComponent } from './email/email.component';
 import { TyperComponent } from './typer/typer.component';
+import { HeadshotComponent } from './headshot/headshot.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { TyperComponent } from './typer/typer.component';
     EducationComponent,
     SocialsComponent,
     EmailComponent,
-    TyperComponent
+    TyperComponent,
+    HeadshotComponent
   ],
   imports: [
     BrowserModule,
