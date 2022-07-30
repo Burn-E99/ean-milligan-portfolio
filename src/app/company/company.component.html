@@ -4,7 +4,7 @@
 		<span *ngIf="!company.url">{{company.name}}</span>
 		<span class="pull-right">
 			{{company.startDate}} - {{company.endDate}}
-			<span class="caret" [ngClass]="projectsState === 'shown' ? 'collapse' : 'expand'" (click)="toggleExpanded()"></span>
+			<span class="caret" [class.hover]="shouldHover && projectsState === 'hidden'" [ngClass]="projectsState === 'shown' ? 'collapse' : 'expand'" (click)="toggleExpanded()"></span>
 		</span>
 	</h3>
 	<div class="projects" [@slideInOut]="projectsState">

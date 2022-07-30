@@ -98,7 +98,7 @@ h3 {
 .caret {
 	cursor: pointer;
 
-	&:hover {
+	&:hover, &.hover {
 		color: $highlight-color-lt;
 	}
 
