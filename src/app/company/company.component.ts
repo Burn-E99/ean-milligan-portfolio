@@ -37,8 +37,9 @@ export class CompanyComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    for (const project of this.company.projects)
-    this.companySkillIds.push(...project.skills);
+    for (const project of this.company.projects) {
+      this.companySkillIds.push(...project.skills);
+    }
     if (this.company.endDate.toLowerCase() === 'current') {
       this.projectsState = 'shown';
     }
