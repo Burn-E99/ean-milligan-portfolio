@@ -14,6 +14,7 @@ export class AppComponent implements OnInit {
   allSkills: Skill[] = [];
   experiencedSkills: Skill[] = [];
   expandAll: boolean = false;
+  currentYear: number = new Date().getFullYear()
 
   toggleExpanded(): void {
     this.expandAll = !this.expandAll;
