@@ -15,3 +15,17 @@
 		border-radius: 50%;
 	}
 }
+
+@media screen and (max-width: 800px) {
+	.headshot {
+		height: 5rem;
+		width: 5rem;
+	}
+}
+
+@media screen and (max-width: 410px) {
+	.headshot {
+		height: 4rem;
+		width: 4rem;
+	}
+}

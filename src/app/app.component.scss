@@ -3,9 +3,9 @@
 .header {
 	display: grid;
 	margin-top: 0.5rem;
-	grid-template-columns: 11.5rem auto;
+	grid-template-columns: 11.5rem auto 7.5rem;
 	grid-template-rows: auto auto auto;
-	grid-template-areas: "headshot fullname" "headshot slug" "headshot email";
+	grid-template-areas: "headshot fullname socials" "headshot slug slug" "headshot email email";
 }
 
 .footer {
@@ -19,6 +19,11 @@
 
 #fullname {
 	grid-area: fullname;
+}
+
+#socials {
+	grid-area: socials;
+	align-self: center;
 }
 
 #slug {
@@ -39,5 +44,41 @@
 
 	.column {
 		width: 49%;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	.page-body {
+		flex-direction: column;
+
+		hr {
+			display: none;
+		}
+
+		.column {
+			width: 100%;
+		}
+	}
+
+	.header {
+		grid-template-columns: 5.5rem auto 7.5rem;
+		grid-template-areas: "headshot fullname fullname" "email email socials" "slug slug slug";
+	}
+
+	h1 {
+		font-size: 3rem;
+		margin-top: 1rem;
+		margin-left: 0.5rem;
+	}
+}
+
+@media screen and (max-width: 410px) {
+	.header {
+		grid-template-columns: 4.5rem auto 7.5rem;
+	}
+
+	h1 {
+		font-size: 2rem;
+		margin-top: 1rem;
 	}
 }

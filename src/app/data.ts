@@ -1,11 +1,11 @@
 import { Project, Company, Education, Skill } from './structs'
 
-const DLProjects: Project[] = [
+const ManTechProjects: Project[] = [
 	{
-		id: 'dl-a4',
+		id: 'dl-a4-d1sco',
 		name: 'DoD/Air Force Contract',
 		startDate: 'Feb 2021',
-		endDate: 'Aug 2022',
+		endDate: 'Current',
 		details: [
 			'Developed and maintained multiple high visibility, mission-critical logistics applications simultaneously',
 			'Designed new workflows from the ground up to assist the customer in managing and tracking their assets more efficiently',
@@ -15,6 +15,28 @@ const DLProjects: Project[] = [
 			'Assisted developers new to the project with onboarding, including setting up their applications and explaining the ecosystem'
 		],
 		skills: ['js', 'ts', 'java', 'sql', 'scss', 'css', 'html', 'react', 'angular', 'angularjs', 'git', 'vscode', 'gitlab', 'jenkins', 'sonar', 'jira', 'bitbucket', 'sourcetree', 'mvn', 'tomcat', 'eclipse', 'windont'],
+	}, {
+		id: 'dl-army-hrc',
+		name: 'HRC Army Contract',
+		startDate: 'Jul 2023',
+		endDate: 'Oct 2023',
+		details: [
+			'Developed a custom CKEditor5 plugin for inserting specific icons into user generated documents',
+			'Fixed off the shelf CKEditor5 plugins to work in a Drupal environment',
+			'Created scripts to assist in the early stages of data migration',
+			'Wrote initial framework for an internal reverse proxy for secure data transfer between Drupal and the presentation layer',
+			'Created initial prototype for the presentation layer\' saml login process'
+		],
+		skills: ['node', 'js', 'angular', 'html', 'scss', 'css', 'ts', 'git', 'vscode', 'sonar', 'windont']
+	}, {
+		id: 'dl-dos-os',
+		name: 'OneStream Consultant',
+		startDate: 'Aug 2022',
+		endDate: '',
+		details: [
+			'Developed internal tools to assist in loading bulk data into OneStream'
+		],
+		skills: ['node', 'js', 'gitlab', 'css', 'react', 'vscode', 'windont']
 	}, {
 		id: 'dl-migration',
 		name: 'Atlassian to GitLab Migration Team',
@@ -34,10 +56,10 @@ const LeidosProjects: Project[] = [
 	{
 		id: 'leidos-a4',
 		name: 'DoD/Air Force Contract',
-		startDate: 'Feb 2021',
-		endDate: 'Aug 2022',
+		startDate: 'May 2018',
+		endDate: 'Aug 2019',
 		details: [
-			'Over two summers, assisted development on multiple React and Angular based webapps',
+			'Over two summers, assisted development on multiple React and Angular based web applications',
 			'Created new remote log file viewer to assist development',
 			'Upgraded administrative tool with new UI and cleaner front end code',
 		],
@@ -119,13 +141,13 @@ export const EDUCATION: Education[] = [
 
 export const COMPANIES: Company[] = [
 	{
-		id: 'dl',
-		url: 'https://www.definitivelogic.com/',
-		name: 'Definitive Logic',
+		id: 'mantech',
+		url: 'https://www.mantech.com/digital-transformation-consulting/',
+		name: 'ManTech DTD (Formerly Definitive Logic)',
 		title: 'Software Engineer',
 		startDate: 'Feb 2021',
 		endDate: 'Current',
-		projects: DLProjects,
+		projects: ManTechProjects,
 	}, {
 		id: 'leidos',
 		url: 'https://www.leidos.com/',
@@ -171,10 +193,10 @@ export const OSPROJECTS: Project[] = [
 		details: [
 			'The Artificer is a powerful dice rolling Discord bot',
 			'Supports 34 unique options that can be mixed together, allowing an infinite number of combinations',
-			'Has been added to over 170 guilds with approximately 5,000 members',
-			'Over 14,000 dice commands parsed by The Artificer',
+			'Has been added to over 480 guilds with approximately 5,000 members',
+			'Over 78,000 dice commands parsed by The Artificer',
 		],
-		skills: ['ts', 'deno', 'sql', 'git', 'sonar', 'vscode', 'linux', 'mysql'],
+		skills: ['ts', 'deno', 'sql', 'git', 'sonar', 'vscode', 'linux', 'mysql', 'postman'],
 	}, {
 		id: 'os-groupup',
 		url: 'https://github.com/Burn-E99/GroupUp/',
@@ -196,7 +218,7 @@ export const OSPROJECTS: Project[] = [
 		details: [
 			'Adds useful error checking to Mybatis mapper XML files',
 			'Checks for most common syntax issues and shows errors/warnings to the user',
-			'Installed over 250 times on the Visual Studio Code Extension Marketplace',
+			'Installed over 800 times on the Visual Studio Code Extension Marketplace',
 		],
 		skills: ['ts', 'git', 'vscode'],
 	}, {
@@ -365,8 +387,8 @@ export const SKILLS: Skill[] = [
 		id: 'solidworks',
 		type: 'other',
 		name: 'SOLIDWORKS',
-		expLevel: 2,
-		yearsExp: 1,
+		expLevel: 3,
+		yearsExp: 2,
 		projects: [],
 	}, {
 		id: 'git',

@@ -5,14 +5,15 @@ import { Skill } from '../structs';
 @Component({
   selector: 'app-typer',
   templateUrl: './typer.component.html',
-  styleUrls: ['./typer.component.scss']
+  styleUrls: ['./typer.component.scss'],
 })
 export class TyperComponent implements OnInit {
   @Input() skillList: Skill[] = [];
   currentWord: string[] = [];
   currentIdx: number = -1;
+  maxLength: number = 0;
 
-  constructor(private experienceService: ExperienceService) { }
+  constructor(private experienceService: ExperienceService) {}
 
   shuffleList(array: any[]) {
     for (let i = array.length - 1; i > 0; i--) {
@@ -62,14 +63,24 @@ export class TyperComponent implements OnInit {
     }
   }
 
+  showFiller(charsUsed: number): string {
+    return new Array(this.maxLength - charsUsed).fill('\u00A0').join(' ');
+  }
+
   ngOnInit(): void {
+    this.maxLength = this.skillList.reduce((a, b) =>
+      a.name.length > b.name.length ? a : b
+    ).name.length;
     setTimeout(() => {
       this.startTyping();
     }, 2500);
   }
 
   onHover(enter: boolean): void {
-    this.experienceService.setHoveredSkillId(enter ? this.skillList[this.currentIdx].id : '');
+    if (this.currentIdx !== -1) {
+      this.experienceService.setHoveredSkillId(
+        enter ? this.skillList[this.currentIdx].id : ''
+      );
+    }
   }
-
 }
