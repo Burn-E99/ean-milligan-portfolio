@@ -1,6 +1,7 @@
 import { Project, Company, Education, Skill } from './structs'
 
 // ILS-S start Apr 2024
+// Add Bruno to dev tools
 const ManTechProjects: Project[] = [
 	{
 		id: 'dl-a4-d1sco',
