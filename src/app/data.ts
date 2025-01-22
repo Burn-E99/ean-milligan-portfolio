@@ -145,7 +145,7 @@ export const COMPANIES: Company[] = [
 	{
 		id: 'mantech',
 		url: 'https://www.mantech.com/digital-transformation-consulting/',
-		name: 'ManTech DTD (Formerly Definitive Logic)',
+		name: 'ManTech - Digital Practice (Formerly Definitive Logic)',
 		title: 'Software Engineer',
 		startDate: 'Feb 2021',
 		endDate: 'Current',
