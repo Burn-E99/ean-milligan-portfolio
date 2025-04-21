@@ -7,7 +7,7 @@ const ManTechProjects: Project[] = [
 		id: 'dl-a4-d1sco',
 		name: 'DoD/Air Force Contract',
 		startDate: 'Feb 2021',
-		endDate: 'Current',
+		endDate: 'Dec 2024',
 		details: [
 			'Developed and maintained multiple high visibility, mission-critical logistics applications simultaneously',
 			'Designed new workflows from the ground up to assist the customer in managing and tracking their assets more efficiently',
